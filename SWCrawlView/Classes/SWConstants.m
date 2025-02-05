@@ -24,7 +24,7 @@ UIColor* UIColorFromRGB(unsigned int rgbValue) {
 
 + (UIFont *)starWarsLogoFont:(NSInteger)size
 {
-    return [UIFont fontWithName:@"StarJedi" size:size];
+    return [UIFont fontWithName:@"SmileySans-Oblique" size:size];
 }
 
 + (UIColor *)introTextColor
@@ -34,7 +34,7 @@ UIColor* UIColorFromRGB(unsigned int rgbValue) {
 
 + (UIFont *)introTextFont:(NSInteger)size
 {
-    return [UIFont fontWithName:@"Franklin Gothic Book" size:size];
+    return [UIFont fontWithName:@"SmileySans-Oblique" size:size];
 }
 
 + (UIColor *)crawlTextColor
@@ -44,17 +44,17 @@ UIColor* UIColorFromRGB(unsigned int rgbValue) {
 
 + (UIFont *)bodyTextFont:(NSInteger)size
 {
-    return [UIFont fontWithName:@"SW Crawl Body" size:size];
+    return [UIFont fontWithName:@"SmileySans-Oblique" size:size];
 }
 
 + (UIFont *)episodeTitleFont:(NSInteger)size
 {
-    return [UIFont fontWithName:@"SW Crawl Title" size:size];
+    return [UIFont fontWithName:@"SmileySans-Oblique" size:size];
 }
 
 + (UIFont *)episodeNumberFont:(NSInteger)size
 {
-    return [UIFont fontWithName:@"SW Crawl Body" size:size];
+    return [UIFont fontWithName:@"SmileySans-Oblique" size:size];
 }
 
 @end
