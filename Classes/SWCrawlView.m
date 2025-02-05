@@ -90,14 +90,24 @@ const CGFloat logoStrokeSizeForFontPointSizeMultiplier = .165;
 
 - (void)unwrapNib
 {
-    [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class)
-                                  owner:self
-                                options:nil];
+//    [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class)
+//                                  owner:self
+//                                options:nil];
+//
+//    [self.xibView setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [self.xibView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"starBg.png"]]];
+//    [self addSubview:self.xibView];
 
+    // 使用 UINib 加载 nib 文件
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass(self.class) bundle:nil];
+    NSArray *nibViews = [nib instantiateWithOwner:self options:nil];
+    self.xibView = nibViews.firstObject;
+
+    // 设置 xibView 的约束和背景
     [self.xibView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.xibView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"starBg.png"]]];
     [self addSubview:self.xibView];
-
+    
     NSDictionary *views = NSDictionaryOfVariableBindings(_xibView);
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_xibView]|"
                                                                  options:0
